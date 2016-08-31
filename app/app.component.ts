@@ -14,8 +14,9 @@ export class AppComponent {
         this.todos = [];
     }
 
-    addToDo(input: HTMLInputElement){
-        this.todos.push(input.value);
-        input.value = "";
+    addToDo(event: any){
+        if(event.type === 'keyup' && event.which === 13){
+            this.todos.push(event.target.value);
+        }
     }
 }
