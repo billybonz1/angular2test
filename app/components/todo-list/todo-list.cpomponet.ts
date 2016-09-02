@@ -8,8 +8,7 @@ import { TodoService } from '../../shared/todo.service';
     selector: 'todo-list',
     templateUrl: './app/components/todo-list/todo-list.component.html',
     directives: [TodoItem],
-    styleUrls: ['./app/components/todo-list/todo-list.component.css'],
-    providers: [TodoService]
+    styleUrls: ['./app/components/todo-list/todo-list.component.css']
 
 })
 

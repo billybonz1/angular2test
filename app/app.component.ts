@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+
+import { TodoService } from './shared/todo.service';
 import { TodoListComponent } from './components/todo-list/todo-list.cpomponet';
 import { Todo } from './shared/todo.model';
 import { TodoFormComponent } from './components/todo-form/todo-form.component';
@@ -10,7 +12,8 @@ import { todos } from "./shared/todo.data";
     selector: 'todo-app',
     templateUrl: 'app/app.component.html',
     styleUrls: ['app/app.component.css'],
-    directives: [TodoFormComponent, TodoListComponent]
+    directives: [TodoFormComponent, TodoListComponent],
+    providers: [TodoService]
 })
 export class AppComponent {
     title: string;

@@ -7,8 +7,7 @@ import { TodoService} from '../../shared/todo.service'
 @Component ({
     selector: "todo-form",
     templateUrl: './app/components/todo-form/todo-form.component.html',
-    styleUrls: ['./app/components/todo-form/todo-form.component.css'],
-    providers: [TodoService]
+    styleUrls: ['./app/components/todo-form/todo-form.component.css']
 })
 
 
@@ -20,7 +19,7 @@ export class TodoFormComponent {
     }
 
 
-    add(title: string){
+    add(title: string): void{
         if(title){
             let todo = new Todo(title);
             this.todoService.addTodo(todo);
