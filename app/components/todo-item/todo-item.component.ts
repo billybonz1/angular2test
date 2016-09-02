@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, Attribute } from '@angular/core';
 import { Todo } from '../../shared/todo.model';
 
 
@@ -11,6 +11,9 @@ import { Todo } from '../../shared/todo.model';
 export class TodoItem {
     @Input() todo: Todo;
     @Output() deleted = new EventEmitter();
+    isChecked() {
+        return this.todo.done;
+    }
 
     toggleDone() {
         this.todo.done = !this.todo.done;
@@ -19,4 +22,6 @@ export class TodoItem {
     delete() {
         this.deleted.emit(this.todo);
     }
+
+
 }
